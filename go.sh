@@ -3,7 +3,7 @@
 version="$(uname -r)"
 
 kernel=/boot/vmlinuz-${version}
-initrd=rblinux-initrd-$(date +%s).img
+initrd=rblinux-initrd-$(git log -1 --format=%h).img
 append='edd=off init=/init HOME=/home rw vga=792'
 
 mkdir cache -p
