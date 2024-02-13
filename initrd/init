@@ -1,0 +1,15 @@
+#!/usr/bin/ruby3.2
+
+Dir.chdir 'home'
+
+require 'rubygems'
+require 'json'
+require 'csv'
+require 'irb'
+
+printf "\e[0m\e[2J\e[0;0H\e[1mWelcome to \e[31mRuby Linux\e[0;1m!\e[0m\n\n"
+
+loop do
+	IRB.start
+	printf "\0[0m"
+end

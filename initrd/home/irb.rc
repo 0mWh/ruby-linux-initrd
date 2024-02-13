@@ -1,0 +1,18 @@
+#!/usr/bin/ruby3.2
+
+$curr_line = 0
+
+IRB.conf[:PROMPT][:SHELL] = {
+	:AUTO_INDENT => false,
+	:PROMPT_I => "\e[1;32m%03n\e[0m:\e[32m%01i\e[0;1m.\e[0m ",
+	:PROMPT_N => "\e[1;32m%03n\e[0m:\e[32m%01i\e[0;1m.\e[0m ",
+	:PROMPT_C => "\e[1;32m%03n\e[0m:\e[32m%01i\e[0;1m,\e[0m ",
+	:PROMPT_S => "\e[1;32m%03n\e[0m:\e[32m%01i\e[0;1m%l\e[0m ",
+	:RETURN   => "\e[1;32m= \e[0m%s\n",
+}
+
+IRB.conf[:PROMPT_MODE] = :SHELL
+
+Dir.glob('/opt/rb/*.rb').each do |rb|
+	require rb
+end

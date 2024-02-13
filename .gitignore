@@ -1,0 +1,6 @@
+*.img
+cache/
+initrd/
+!initrd/init
+!initrd/opt
+!initrd/home
