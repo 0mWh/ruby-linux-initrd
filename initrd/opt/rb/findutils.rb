@@ -1,4 +1,4 @@
-#!/usr/bin/ruby3.2
+#!/usr/bin/ruby
 
 def find x='.'
 	Dir.glob(x + '*').reduce([]) do |acc, c|

@@ -1,4 +1,4 @@
-#!/usr/bin/ruby3.2
+#!/usr/bin/ruby
 
 def load_mod path
 	find('/lib/modules/' + %x[ uname -r ].strip + '/kernel/' + path).select do |f|

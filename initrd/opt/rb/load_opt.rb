@@ -1,4 +1,4 @@
-#!/usr/bin/ruby3.2
+#!/usr/bin/ruby
 
 def load_opt name
 	Dir.glob("/opt/rb-opt/#{name}*.rb").map do |file|
